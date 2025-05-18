@@ -47,6 +47,11 @@ def main():
         # Update call
         group_updatable.update(dt)
 
+        for asteroid in group_asteroids:
+            if asteroid.check_collision(player):
+                print("Game over!")
+                return
+
 
         # Draw call
         for item in group_drawable:
