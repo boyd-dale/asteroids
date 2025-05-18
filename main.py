@@ -28,11 +28,16 @@ def main():
             if event.type == pygame.QUIT:
                 return
         
-        
+        # Rendering
         # Fill the screen black
         screen.fill(0)
-
+        # Draw the player
         player.draw(screen)
+
+
+        # Player update call
+        player.update(dt)
+
 
 
 
